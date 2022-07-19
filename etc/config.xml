@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <elastic_logger>
+            <general>
+                <port>9200</port>
+                <index>logs-monolog-magento2</index>
+                <log_levels>400,500</log_levels>
+            </general>
+        </elastic_logger>
+    </default>
+</config>
