@@ -5,6 +5,7 @@
   "type": "magento2-module",
   "require": {
     "magento/framework": "*",
+    "elastic/ecs-logging": "^1.0",
     "elasticsearch/elasticsearch": "7.11.*",
     "monolog/monolog": "1.27.*",
     "ruflin/elastica": "7.1.5",
