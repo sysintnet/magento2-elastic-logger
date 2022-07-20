@@ -14,3 +14,31 @@ Add to the file `env.php` the next section
     'args' => []
 ]
 ```
+
+### Files
+
+auth.json
+```json
+{
+    "gitlab-token" : {
+        "repo.sysint.net": {
+            "username": "module-elastic-logger",
+            "token": "BgCjh-CEdLzgH4_CDViL"
+        }
+    }
+}
+
+```
+
+
+composer.json
+```json
+{
+  "repositories": {
+    "4": {
+      "type": "composer",
+      "url": "https://repo.sysint.net/api/v4/group/4/-/packages/composer/"
+    }
+  }
+}
+```
