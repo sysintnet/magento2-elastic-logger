@@ -6,7 +6,7 @@
   "require": {
     "magento/framework": "*",
     "elastic/ecs-logging": "^1.0",
-    "elasticsearch/elasticsearch": "7.11.*",
+    "elasticsearch/elasticsearch": "7.*",
     "monolog/monolog": "1.26.* | 1.27.*",
     "ruflin/elastica": "7.1.5",
     "php": "^7.4 || ^8.0",
