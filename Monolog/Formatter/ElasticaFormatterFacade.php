@@ -3,8 +3,9 @@
 namespace Sysint\ElasticLogger\Monolog\Formatter;
 
 use Elastica\Document;
+use Magento\Framework\App\ObjectManager;
 use Monolog\Formatter\ElasticaFormatter;
-
+use Sysint\ElasticLogger\Monolog\Formatter\FormatterPool;
 
 /**
  * Format a log message into an Elastica Document
@@ -23,9 +24,6 @@ class ElasticaFormatterFacade extends ElasticaFormatter
 
     /** @var bool */
     private bool $useLogOriginFromContext = true;
-
-    /** @var array */
-    private array $tags;
 
     /**
      * Set tags
@@ -92,6 +90,8 @@ class ElasticaFormatterFacade extends ElasticaFormatter
         if (empty($this->tags) === false) {
             $outRecord['tags'] = $this->normalize($this->tags);
         }
+        
+        $this->formatConextInPool($outRecord);
 
         return parent::format($outRecord);
     }
@@ -127,6 +127,17 @@ class ElasticaFormatterFacade extends ElasticaFormatter
         }
     }
 
+    /**
+     * Formatter pool
+     * @param array $outRecord
+     * @return void
+     */
+    private function formatConextInPool(array &$outRecord) : void
+    {
+        $formatterPool = ObjectManager::getInstance()->get(FormatterPool::class);
+        $formatterPool->execute($outRecord);
+    }
+    
     /**
      * Format log
      * @param array $inContext

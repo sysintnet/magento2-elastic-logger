@@ -1,13 +1,13 @@
 {
   "name": "sysint/module-elastic-logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "N/A",
   "type": "magento2-module",
   "require": {
     "magento/framework": "*",
     "elastic/ecs-logging": "^1.0",
-    "elasticsearch/elasticsearch": "7.*",
-    "monolog/monolog": "1.26.* | 1.27.*",
+    "elasticsearch/elasticsearch": "7.11.*",
+    "monolog/monolog": "1.27.*",
     "ruflin/elastica": "7.1.5",
     "php": "^7.4 || ^8.0",
     "ext-json": "*"

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Sysint\ElasticLogger\Monolog\Formatter\FormatterPool">
+        <arguments>
+            <argument name="formatters" xsi:type="array">
+                <item name="addHost" xsi:type="object">\Sysint\ElasticLogger\Monolog\Formatter\AddHostFields</item>
+                <item name="AddState" xsi:type="object">\Sysint\ElasticLogger\Monolog\Formatter\AddStateInformation</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
