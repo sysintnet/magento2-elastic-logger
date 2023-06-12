@@ -1,19 +1,39 @@
 {
   "name": "sysint/magento2-elastic-logger",
   "version": "1.0.1",
-  "description": "N/A",
+  "description":"Magento 2 Elastic Log Extension",
+  "keywords": [
+    "magento 2",
+    "elastic",
+    "logger",
+    "log monitoring",
+    "Logging Magento logs with the ELK"
+  ],
   "type": "magento2-module",
   "require": {
-    "magento/framework": "*",
+    "magento/module-backend": "102.0.*",
+    "magento/framework": "103.0.*",
     "elastic/ecs-logging": "^1.0",
     "elasticsearch/elasticsearch": "7.11.*",
     "monolog/monolog": "1.27.*",
     "ruflin/elastica": "7.1.5",
-    "php": "^7.4 || ^8.0",
+    "php": "~7.4.0||~8.1.0||~8.2.0",
     "ext-json": "*"
   },
   "license": [
-    "Proprietary"
+    "MIT"
+  ],
+  "homepage": "https://sysint.net/",
+  "support": {
+    "issues": "https://github.com/sysintnet/magento2-elastic-logger/issues"
+  },
+  "authors": [
+    {
+      "name": "Sergey Vlasov",
+      "email": "sergey@sysint.net",
+      "homepage": "https://sysint.net/",
+      "role": "Leader"
+    }
   ],
   "autoload": {
     "files": [

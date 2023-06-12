@@ -26,6 +26,7 @@ class Configuration
     /** @var string */
     private const XML_PATH_CONFIG_INDEX = 'elastic_logger/general/index';
 
+    /** @var string */
     private const XML_PATH_CONFIG_LOG_LEVELS = 'elastic_logger/general/log_levels';
 
     /**
